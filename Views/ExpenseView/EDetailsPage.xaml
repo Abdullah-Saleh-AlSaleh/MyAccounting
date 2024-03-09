@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyAccounting.Views.ExpenseView.EDetailsPage"
+                 Title="العرض التفاصيل المصروفات"
+    xmlns:models="clr-namespace:MyAccounting.Models"
+                     
+xmlns:dg="clr-namespace:Maui.DataGrid;assembly=Maui.DataGrid"
+           xmlns:local="clr-namespace:MyAccounting"
+  xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+  ios:Page.UseSafeArea="True"
+           FlexLayout.AlignSelf="End">
+    
+            <!--x:DataType="models:Expense"-->
+
+
+    <Grid RowDefinitions="5,*">
+        <dg:DataGrid  Grid.Row="2"  HeaderBordersVisible="True"  BorderColor="White" ItemsSource="{Binding ItemsExpense}" SelectionEnabled="True" SelectedItem="{Binding SelectedExpense}"
+                     RowHeight="50" HeaderHeight="50"  IsRefreshing="{Binding IsRefreshing}" PullToRefreshCommand="{Binding RefreshCommand}">
+
+            <dg:DataGrid.NoDataView>
+                <Label Text=" انتظار أو لاتوجد البيانات" HorizontalOptions="Center" VerticalOptions="Center" />
+            </dg:DataGrid.NoDataView>
+            <dg:DataGrid.Columns>
+
+                <dg:DataGridColumn Title="التاريخ" PropertyName="Date" />
+                <dg:DataGridColumn Title="البيان" PropertyName="Statement" />
+                <dg:DataGridColumn Title="التفاصيل البيان" PropertyName="StatementDa" />
+     
+                <dg:DataGridColumn Title="السعر" PropertyName="Total_Value"  />
+            </dg:DataGrid.Columns>
+            <dg:DataGrid.RowsBackgroundColorPalette>
+                <dg:PaletteCollection>
+                    <Color>#F2F2F2</Color>
+                    <Color>#FFFFFF</Color>
+                </dg:PaletteCollection>
+            </dg:DataGrid.RowsBackgroundColorPalette>
+            <dg:DataGrid.Resources>
+                <ResourceDictionary>
+                    <!--<conv:StreakToColorConverter x:Key="StreakToColorConverter" />-->
+                </ResourceDictionary>
+            </dg:DataGrid.Resources>
+        </dg:DataGrid>
+    </Grid>
+
+</ContentPage>

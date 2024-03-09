@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyAccounting.Views.PurchaseView.PView"
+             Title="المشتريات">
+    <VerticalStackLayout 
+Spacing="25"
+Padding="30,0"
+VerticalOptions="Center">
+
+        <!-- <Button
+             x:Name="SAdd"
+             Text="إضافة المشتريات"
+             Clicked="SAddClicked"
+             WidthRequest="300"
+             HeightRequest="50"
+             HorizontalOptions="Center" />
+             <Button
+             x:Name="DSales"
+            Text="فتح الملف اكسل"
+           Clicked="ShrSalesClicked"
+            WidthRequest="300"
+            HeightRequest="50"
+             HorizontalOptions="Center" />
+       -->
+
+        <Label x:Name="PurchaseTotal1" Text="" FontSize="Medium" HorizontalOptions="FillAndExpand"  />
+        <Label x:Name="PurchaseTotal2" Text="" FontSize="Medium" HorizontalOptions="FillAndExpand"  />
+        <Button
+             x:Name="PDetails"
+            FontSize="Medium"
+             Text="العرض التفاصيل وإضافة المشتريات"
+             Clicked="PDetailsClicked"
+             HeightRequest="70"
+             HorizontalOptions="FillAndExpand" />
+  
+    </VerticalStackLayout>
+</ContentPage>

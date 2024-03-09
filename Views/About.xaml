@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyAccounting.Views.About"
+             Title="حول التطبيق">
+    <VerticalStackLayout Spacing="10"
+Padding="30,50" >
+        <Label
+            Text="المعلومات عن التطبيق"
+            FontSize="Large"
+            VerticalTextAlignment="Start"
+            />
+        <Label 
+            Text="  عبارة البرنامج المحاسبي لحساب المبيعات والمشتريات والمصروفات والدخل/الارباح والعائد على الاستثمار، التابع لدراسة الجدوى الاقتصادية لمشروع الانتاج صغار الماعز "
+          FontSize="Medium"
+          TextTransform="Default"
+            TextType="Text"
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="{OnPlatform Android=Start,iOS=Start,MacCatalyst=CenterAndExpand,WinUI=CenterAndExpand}"
+            VerticalTextAlignment="Start"
+            />
+        <Grid RowDefinitions="800,*" VerticalOptions="FillAndExpand">
+            <Label Text="© 2024 عبدالله الصالح  ، جميع الحقوق محفوظة " 
+        FontSize="Micro"
+             VerticalTextAlignment="Center"
+             VerticalOptions="Center"
+             
+             HorizontalOptions="Center"
+             />
+        </Grid>
+  
+    </VerticalStackLayout>
+</ContentPage>

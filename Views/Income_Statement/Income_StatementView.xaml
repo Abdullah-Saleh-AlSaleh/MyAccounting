@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyAccounting.Views.Income_Statement.Income_StatementView">
+
+
+    <VerticalStackLayout Spacing="10"
+Padding="20,20">
+            
+        
+        <Label 
+            Text="قائمة الدخل"
+            FontSize="Large"
+                     VerticalTextAlignment="Start"
+VerticalOptions="Start" 
+HorizontalOptions="Start" />
+        
+            <Label Text=""  x:Name="TotalSales" FontSize="Subtitle" VerticalTextAlignment="Start" HorizontalOptions="Start" VerticalOptions="Start"/>
+        <Label Text="" x:Name="TotalPurchase" FontSize="Subtitle" VerticalTextAlignment="Start" HorizontalOptions="Start" VerticalOptions="Start" />
+        <Label Text="" x:Name="TotalExpense" FontSize="Subtitle"  VerticalTextAlignment="Start" HorizontalOptions="Start" VerticalOptions="Start"/>
+        <Label Text="" x:Name="ProfitLoss"  FontSize="Subtitle" VerticalTextAlignment="Start" HorizontalOptions="Start" VerticalOptions="Start" />
+        <Label 
+Text="العائد على الاستثمار"
+            FontSize="Large"
+            VerticalTextAlignment="Start"
+VerticalOptions="Start" 
+HorizontalOptions="Start" />
+
+        <!--<Label Text="" x:Name="TotalSales1" FontSize="Subtitle" VerticalTextAlignment="Start" HorizontalOptions="Start" VerticalOptions="Start" />
+        <Label Text="" x:Name="TotalPurchase1" FontSize="Subtitle"  VerticalTextAlignment="Start" HorizontalOptions="Start" VerticalOptions="Start" />
+        <Label Text="" x:Name="TotalExpense1" FontSize="Medium"  VerticalTextAlignment="Start" HorizontalOptions="Start" VerticalOptions="Start"/>
+        <Label Text="" x:Name="ProfitLoss1" BackgroundColor="Yellow" FontSize="Subtitle"  VerticalTextAlignment="Start" HorizontalOptions="Start" VerticalOptions="Start"/>-->
+        <Label Text="" x:Name="ReturnOnInvestmentRatio"  FontSize="Subtitle" VerticalTextAlignment="Start" HorizontalOptions="Start" VerticalOptions="Start" />
+        <Label Text="" x:Name="ReturnOnInvestmentRatio1"  FontSize="Subtitle" VerticalTextAlignment="Start" HorizontalOptions="Start" VerticalOptions="Start" />
+
+    </VerticalStackLayout>
+   
+</ContentPage>

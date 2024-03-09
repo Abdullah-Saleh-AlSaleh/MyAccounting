@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyAccounting.Views.ExpenseView.EAdd"
+             Title="إضافة المصروفات"
+    xmlns:models="clr-namespace:MyAccounting.Models"
+            x:DataType="models:Expense">
+
+    <ScrollView>
+        <VerticalStackLayout  Spacing="25"
+Padding="26,0"
+VerticalOptions="Center">
+            <Label FontSize="Medium"  HorizontalOptions="FillAndExpand" Text="البيان"  />
+            <Entry FontSize="Medium"  HorizontalOptions="FillAndExpand"  Text="{Binding Statement}"  Placeholder="البيان" />
+            <Label FontSize="Medium"  HorizontalOptions="FillAndExpand" Text="التفاصيل" />
+            <Entry FontSize="Medium"  HorizontalOptions="FillAndExpand" Text="{Binding StatementDa}"  Placeholder="التفاصيل"  />
+            <Label FontSize="Medium"  HorizontalOptions="FillAndExpand" Text="السعر" />
+            <Entry FontSize="Medium"  HorizontalOptions="FillAndExpand"  Text="{Binding Total_Value}"  />
+            <Button FontSize="Medium"  HorizontalOptions="FillAndExpand" Text="إضافة"
+                 Clicked="OnSaveClicked" />
+            <!--Admin-->
+            <!--<Button Text="Delete"
+                 Clicked="OnDeleteClicked" />
+            <Button Text="Cancel"
+                 Clicked="OnCancelClicked" />-->
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

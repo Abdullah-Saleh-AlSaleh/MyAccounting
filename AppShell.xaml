@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MyAccounting.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MyAccounting"
+    xmlns:a="clr-namespace:MyAccounting.Views"
+    xmlns:s="clr-namespace:MyAccounting.Views.SalesView"
+    xmlns:p="clr-namespace:MyAccounting.Views.PurchaseView"
+    xmlns:e="clr-namespace:MyAccounting.Views.ExpenseView"
+    xmlns:ic="clr-namespace:MyAccounting.Views.Income_Statement"
+    Shell.FlyoutBehavior="{OnPlatform Android=Flyout,iOS=Flyout,MacCatalyst=Locked,WinUI=Locked}">
+    <ShellContent
+ Title="الصفحة الرئيسية"
+ ContentTemplate="{DataTemplate ic:Income_StatementView}"
+ Route="Income_StatementView" />
+    <ShellContent
+     Title="المبيعات"
+    
+     ContentTemplate="{DataTemplate s:SView}"
+     Route="SView" />
+
+    <ShellContent
+   Title="المشتريات"
+
+   ContentTemplate="{DataTemplate p:PView}"
+   Route="PView" />
+    <ShellContent
+   Title="المصروفات"
+
+   ContentTemplate="{DataTemplate e:ViewPage}"
+   Route="ViewPage" />
+
+    <ShellContent
+        Title="حول التطبيق"
+        FlexLayout.AlignSelf="End"
+        ContentTemplate="{DataTemplate a:About}"
+        Route="About" />
+
+</Shell>

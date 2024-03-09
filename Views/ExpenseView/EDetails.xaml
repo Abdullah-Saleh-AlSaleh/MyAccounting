@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyAccounting.Views.ExpenseView.EDetails"
+            xmlns:local="clr-namespace:MyAccounting"
+          xmlns:models="clr-namespace:MyAccounting.Models"
+          xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+          ios:Page.UseSafeArea="True"
+ 
+      Title="إجمالي المصروفات">
+
+    <Grid RowDefinitions="*,Auto">
+        
+        <CollectionView 
+            VerticalOptions="Fill"
+            ItemsSource="{Binding ItemsExpenseT}"
+            SelectionMode="Single"
+            SelectionChanged="CollectionView_SelectionChanged">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:ExpenseTotal">
+
+                    <Grid ColumnDefinitions="*, Auto" Padding="20">
+
+
+                        <Label Text="{Binding Date}"
+                          
+                                HorizontalOptions="Start"
+                             VerticalOptions="Start" />
+                        <Label Text="{Binding Statement}"
+                          
+                                HorizontalOptions="Center"
+                             VerticalOptions="Center" />
+
+
+                        <Label Text="{Binding Total_Value}"
+                             
+                              
+                                HorizontalOptions="End"
+                                VerticalOptions="End" />
+
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Grid.Row="1" FontSize="Medium" Text=" إضافة المصروفات" Clicked="OnItemAdded"
+          Margin="20"/>
+    </Grid>
+</ContentPage>
